@@ -1,0 +1,38 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.page-content {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.main-menu-link-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.menu-link {
+  vertical-align: middle;
+  margin-left: 6px;
+  font-size: small;
+}
+
+.menu-icon {
+  vertical-align: middle;
+}
+
+.app-sidenav {
+  min-width: 300px;
+}
+
+#sidenav_container {
+  top: 64px !important;
+}
+
+@media(max-width: 599px) {
+  #sidenav_container {
+    top: 56px !important;
+  }
+}
