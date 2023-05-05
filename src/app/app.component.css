@@ -12,7 +12,6 @@
   align-items: center;
 }
 
-
 .menu-link {
   vertical-align: middle;
   margin-left: 6px;
@@ -24,7 +23,7 @@
 }
 
 .app-sidenav {
-  min-width: 300px;
+  min-width: 280px;
 }
 
 #sidenav_container {
@@ -45,4 +44,9 @@
 .reduce-expansion-margin-bottom {
   height: 0px;
   margin-bottom: -20px;
+}
+
+.home-button {
+  width: 30em;
+  text-align: left;
 }

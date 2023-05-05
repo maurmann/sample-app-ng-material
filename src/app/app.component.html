@@ -19,36 +19,18 @@
   <mat-sidenav mode="side" [(opened)]="sideBarOpened" class="app-sidenav">
     <mat-list>
       <mat-list-item routerLink="#">
-        <a mat-button href="#">
-          <mat-icon class="menu-icon">home</mat-icon>
-          <span class="menu-link">Home</span>
+        <a mat-button color="primary" href="#">
+          <mat-icon>add_box</mat-icon>
+          <span class="menu-link">Novo Pedido</span>
         </a>
       </mat-list-item>
-      <mat-expansion-panel [class.mat-elevation-z0]="true">
-        <mat-expansion-panel-header>Orders</mat-expansion-panel-header>
+      <mat-expansion-panel [class.mat-elevation-z0]="true" *ngFor="let menu of mainMenu">
+        <mat-expansion-panel-header>{{menu.name}}</mat-expansion-panel-header>
         <div class="reduce-expansion-margin-top"></div>
         <mat-nav-list>
-          <a mat-list-item routerLink="#">
-            <mat-icon class="menu-icon">apple</mat-icon>
-            <span class="menu-link">New Order</span>
-          </a>
-          <a mat-list-item routerLink="#">
-            <mat-icon class="menu-icon">android</mat-icon>
-            <span class="menu-link">Order Status</span>
-          </a>
-        </mat-nav-list>
-        <div class="reduce-expansion-margin-bottom"></div>
-      </mat-expansion-panel>
-      <mat-expansion-panel [class.mat-elevation-z0]="true">
-        <mat-expansion-panel-header>Management</mat-expansion-panel-header>
-        <div class="reduce-expansion-margin-top"></div>
-        <mat-nav-list>
-          <a mat-list-item routerLink="#">
-            <mat-icon class="menu-icon">apple</mat-icon><span class="menu-link">Products</span>
-          </a>
-          <a mat-list-item routerLink="#">
-            <mat-icon class="menu-icon">android</mat-icon>
-            <span class="menu-link">Customers</span>
+          <a mat-list-item routerLink="#" *ngFor="let item of menu.items">
+            <mat-icon class="menu-icon">{{item.icon}}</mat-icon>
+            <span class="menu-link">{{item.name}}</span>
           </a>
         </mat-nav-list>
         <div class="reduce-expansion-margin-bottom"></div>
@@ -56,6 +38,8 @@
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
+
+
     <div class="page-content">
       <h2>Angular Material</h2>
 
