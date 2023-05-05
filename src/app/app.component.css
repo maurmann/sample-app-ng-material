@@ -36,3 +36,13 @@
     top: 56px !important;
   }
 }
+
+.reduce-expansion-margin-top {
+  height: 0px;
+  margin-top: -20px;
+}
+
+.reduce-expansion-margin-bottom {
+  height: 0px;
+  margin-bottom: -20px;
+}

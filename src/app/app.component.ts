@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { MenuItem } from './menu-item';
+import { MenuCategory } from './menu-category';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +8,22 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+
   sideBarOpened: boolean = true;
 
-  ngOnInit(): void {}
+
+  mainMenu: MenuCategory[] = [];
+
+
+
+  ngOnInit(): void {
+    this.mainMenu.push({
+      name: "Pedidos", icon: "shopping-cart", items: [{ name: "Novo Pedido", icon: "add-box", link: "#" }, { name: "Pedidos Pendentes", icon: "pending-actions", link: "#" }]
+    });
+  }
+
+
+
 
   toggleMenu(): void {
     this.sideBarOpened = !this.sideBarOpened;

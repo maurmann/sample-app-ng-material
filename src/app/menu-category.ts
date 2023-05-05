@@ -1,16 +1,7 @@
 import { MenuItem } from "./menu-item";
 
 export class MenuCategory {
-  icon: string;
-  name: string;
+  icon: string | undefined;
+  name: string | undefined;
   items: MenuItem[] = [];
-
-  constructor(icon:string,name:string) {
-    this.icon = icon;
-    this.name = name;
-  }
-
-  attachItems(items: MenuItem[]) {
-    this.items = items;
-  }
 }
