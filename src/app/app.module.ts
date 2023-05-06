@@ -13,9 +13,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NewOrderComponent } from './orders/new-order/new-order.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NewOrderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

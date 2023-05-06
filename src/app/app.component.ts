@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { MenuItem } from './menu-item';
-import { MenuCategory } from './menu-category';
+import { MenuItem } from './models/menu-item';
+import { MenuCategory } from './models/menu-category';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
       name: "Pedidos",
       icon: "shopping-cart",
       items: [
+        { name: "Adicionar Pedido", icon: "add_box", link: "#" },
         { name: "Sumário de Pedidos", icon: "summarize", link: "#" },
         { name: "Pedidos Pendentes", icon: "pending_actions", link: "#" }]
     });
