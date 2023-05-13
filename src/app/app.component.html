@@ -17,13 +17,6 @@
 
 <mat-sidenav-container id="sidenav_container" fullscreen>
   <mat-sidenav mode="side" [(opened)]="sideBarOpened" class="app-sidenav">
-    <mat-nav-list>
-      <a mat-list-item routerLink="#">
-        <mat-icon class="menu-icon">home</mat-icon>
-        <span class="menu-link">Página Inicial</span>
-      </a>
-    </mat-nav-list>
-    <div class="reduce-expansion-margin-top"></div>
     <mat-list>
       <mat-expansion-panel [class.mat-elevation-z0]="true" *ngFor="let menu of mainMenu">
         <mat-expansion-panel-header>{{menu.name}}</mat-expansion-panel-header>
